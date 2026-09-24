@@ -23,3 +23,19 @@ def run_scan(command, output_name):
         f.write(result.stdout)
 
     print(f"[+] Résultats sauvegardés dans {output_file}\n")
+
+
+def menu():
+    print("""NMAP RECON TOOLKIT
+1. Scan découverte d'hôte (-sn)
+2. Scan SYN (-sS)
+3. Scan TCP Connect (-sT)
+4. Scan UDP (-sU)
+5. Scan FIN (-sF)
+6. Scan furtif (-sn -T0)
+7. Scripts SMB (users, groups, shares)
+8. Scan -sC (scripts par défaut)
+0. Quitter
+""")
+
+
