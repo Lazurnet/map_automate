@@ -38,4 +38,35 @@ def menu():
 0. Quitter
 """)
 
+choice = input("Choix : ")
+    target = input("Cible (IP ou réseau) : ")
 
+    if choice == "1":
+        run_scan(f"nmap -sn {target}", "host_discovery")
+
+    elif choice == "2":
+        run_scan(f"nmap -sS {target}", "syn_scan")
+
+    elif choice == "3":
+        run_scan(f"nmap -sT {target}", "tcp_connect")
+
+    elif choice == "4":
+        run_scan(f"nmap -sU {target}", "udp_scan")
+
+    elif choice == "5":
+        run_scan(f"nmap -sF {target}", "fin_scan")
+
+    elif choice == "6":
+        run_scan(f"nmap -sn -T0 {target}", "stealth_scan")
+
+    elif choice == "7":
+        run_scan(f"nmap --script smb-enum-users,smb-enum-groups,smb-enum-shares -p445 {target}", "smb_enum")
+
+    elif choice == "8":
+        run_scan(f"nmap -sC {target}", "default_scripts")
+
+    elif choice == "0":
+        exit()
+
+    else:
+        print("Choix invalide.")
