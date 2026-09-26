@@ -1,4 +1,3 @@
-
 import os
 import subprocess
 from datetime import datetime
@@ -70,3 +69,10 @@ choice = input("Choix : ")
 
     else:
         print("Choix invalide.")
+
+
+if __name__ == "__main__":
+    if not os.path.exists("results"):
+        os.makedirs("results")
+    while True:
+        menu()
