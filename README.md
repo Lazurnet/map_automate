@@ -1,4 +1,4 @@
-# Nmap_automate (Septembre 2026)
+# map automate (Septembre 2026)
 
 J'ai fait cet outil Python qui permet d’automatiser les scans Nmap étudiés dans le module **3.2 – Reconnaissance active** du cours NetAcad *Hacker Éthique*.  
 Ce projet m'a permis de comprendre comment lancer différents types de scans, sauvegarder automatiquement les résultats dans des fichiers générés.
